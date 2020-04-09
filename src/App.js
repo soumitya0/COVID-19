@@ -20,26 +20,6 @@ class App extends Component {
     };
   }
 
-  IndiaStateDistrictWise() {
-    return axios
-      .get("https://api.covid19india.org/state_district_wise.json")
-      .then((response) => {
-        console.log("IndiaStateDistrictWise");
-        console.log(response);
-        console.log(response.data);
-
-        this.setState({
-          IndiaData: response.data,
-        });
-      })
-      .catch((err) => {
-        console.log(err);
-        this.setState({
-          errorMsg: " Error retreiving data",
-        });
-      });
-  }
-
   CDR_Data_IND() {
     //CDR = CONFIRM DEATHS RECOVERS  of INDIA
     return axios
@@ -84,7 +64,6 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.IndiaStateDistrictWise();
     this.CDR_Data_IND();
     this.CDR_Data_World();
   }
@@ -107,7 +86,9 @@ class App extends Component {
           </div>
 
           <div className="App_Table">
-            <Table data={this.state.IndiaData} name={this.state.name} />
+            {/* <Table data={this.state.IndiaData} name={this.state.name} /> */}
+
+            <Table />
           </div>
           <div className="App_PieChart"> Pie_Chart</div>
 
