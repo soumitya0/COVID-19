@@ -37,7 +37,6 @@
 
 /* App_Table */
 .App_Table {
-  background-color: #f8e1f4;
 }
 
 /* App_PieChart */
@@ -93,12 +92,14 @@
 
 /* Table */
 
-#title {
-  text-align: center;
+.title {
+  text-align: right;
   font-family: arial, sans-serif;
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 
-#students {
+.TableState {
   text-align: center;
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
@@ -106,21 +107,21 @@
   width: 100%;
 }
 
-#students td,
+.TableState td,
 th {
   border: 1px solid #ddd;
   padding: 8px;
 }
 
-#students tr:nth-child(even) {
+.TableState tr:nth-child(even) {
   background-color: #f2f2f2;
 }
 
-#students tr:hover {
+.TableState tr:hover {
   background-color: #ddd;
 }
 
-#students th {
+.TableState th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: center;

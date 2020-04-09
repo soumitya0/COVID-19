@@ -8,22 +8,8 @@ class Table extends Component {
 
     this.state = {
       DATA: [],
-      STATES: [],
-      DISTRICT: [],
-      CONFIRMED: [],
-      ACTIVE: [],
-      RECOVERED: [],
-
-      TableHead: ["Id", "Nmae", "Age", "Email"],
 
       TableHeaderData: ["STATE", "CONFIRMED", "RECOVERED", "DEATHS"],
-
-      students: [
-        { id: 1, name: "Wasif", age: 21, email: "wasif@email.com" },
-        { id: 2, name: "Ali", age: 19, email: "ali@email.com" },
-        { id: 3, name: "Saad", age: 16, email: "saad@email.com" },
-        { id: 4, name: "Asad", age: 25, email: "asad@email.com" },
-      ],
     };
   }
 
@@ -47,26 +33,6 @@ class Table extends Component {
           errorMsg: " Error retreiving data",
         });
       });
-  }
-
-  // NORMAL TABLE
-  renderTableHeader() {
-    return this.state.TableHead.map((data) => <th key={data.id}> {data}</th>);
-  }
-
-  //NORMAL TABLE
-  renderTableData() {
-    return this.state.students.map((student, index) => {
-      const { id, name, age, email } = student; //destructuring
-      return (
-        <tr key={id}>
-          <td>{id}</td>
-          <td>{name}</td>
-          <td>{age}</td>
-          <td>{email}</td>
-        </tr>
-      );
-    });
   }
 
   //COVID-19 Table;
@@ -105,18 +71,11 @@ class Table extends Component {
 
     return (
       <div>
-        <h1 id="title">React Dynamic Table</h1>
-
-        {/* NORMAL TABLE */}
-        <table id="students">
-          <tr>{this.renderTableHeader()}</tr>
-
-          <tbody>{this.renderTableData()}</tbody>
-        </table>
+        <h1 className="title">INDIA COVID-19 TRACKER </h1>
 
         {/* COVID-19 */}
 
-        <table>
+        <table className="TableState">
           <tr>{this.TableHeader()}</tr>
           <tbody>{this.TableData()}</tbody>
         </table>
