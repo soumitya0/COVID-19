@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --CONFIRMED: #ffe0e6;
+  --RECOVERED: #eff7ff;
+  --DEATHS: #f6f6f7;
+}
+
+.AppGrid {
+  width: 78%;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 250px 1fr 120px;
+  column-gap: 60px;
+}
+
+/*NavBar*/
+.App_NavBar {
+  width: 100%;
+  height: 100px;
+  background-color: #00adb5;
+}
+
+/* App_india */
+
+.App_india {
+}
+
+/* App_world */
+.App_world {
+}
+
+/* App_Table */
+.App_Table {
+  background-color: #f8e1f4;
+}
+
+/* App_PieChart */
+.App_PieChart {
+  background-color: #b2ebf2;
+}
+
+/*Footer*/
+.App_Footer {
+  background-color: #000;
+  grid-column: 1/-1;
+}
+
+/* Card */
+.CardGrid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 50px 100px;
+  column-gap: 20px;
+  row-gap: 30px;
+}
+
+.countryName {
+  grid-column: 1/-1;
+  place-self: center;
+  font-size: 30px;
+  border-radius: 10px 10px 10px 10px; /* TL  TR  BR  BL */
+}
+.Card_CONFIRMED {
+  background-color: var(--CONFIRMED);
+  color: red;
+
+  text-align: center;
+  box-shadow: 0 3px 5px rgba(104, 104, 104, 0.8);
+  border-radius: 7px;
+}
+
+.Card_RECOVERED {
+  text-align: center;
+  color: #027dff;
+  background-color: var(--RECOVERED);
+  box-shadow: 0 3px 5px rgba(104, 104, 104, 0.8);
+  border-radius: 10px 10px 10px 10px; /* TL  TR  BR  BL */
+}
+.Card_DEATHS {
+  text-align: center;
+  color: #6e777f;
+  background-color: var(--DEATHS);
+  box-shadow: 0 3px 5px rgba(104, 104, 104, 0.8);
+  border-radius: 10px 10px 10px 10px; /* TL  TR  BR  BL */
+}
+
+/* Table */
+
+#title {
+  text-align: center;
+  font-family: arial, sans-serif;
+}
+
+#students {
+  text-align: center;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  border: 3px solid #ddd;
+  width: 100%;
+}
+
+#students td,
+th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#students tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#students tr:hover {
+  background-color: #ddd;
+}
+
+#students th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #4caf50;
+  color: white;
+}
